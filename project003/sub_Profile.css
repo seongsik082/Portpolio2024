@@ -1,0 +1,171 @@
+/* 언어설정 */
+@charset 'UTF-8';
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HakgyoansimBombanghakR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimBombanghakR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+ul,ol {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+body {background-image: url(img/profil_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -10px;
+    width: 100%;
+    height: 100vh;
+}
+
+/* header 설정 */
+header {width: 100%;
+    height: 150px;
+    display: flex;
+    
+}
+.title {width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.title img {width: 70%;
+height: auto;}
+
+.menu {width: 70%;
+    height: 100%;
+    
+}
+.menu ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.menu li {margin: 0 10px 30px;
+    overflow: hidden;}
+.menu a {font-size: 30px;
+    color: #FFB84D;
+    font-family: 'SBAggroB';
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.menu a {
+    border: 4px solid rgba(255, 255, 255, .7);
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .menu a span {
+    z-index: 20;
+  }
+  
+  .menu a:after {
+    background: #fff;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: 0.4;
+    position: absolute;
+    top: -50px;
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+    transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: 1;
+    /* transition-delay: 0.4s; */
+  }
+  
+  .menu a:hover:after {
+    left: 120%;
+    transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+
+/* main설정 */
+
+main {
+    width: 100%;
+    height: calc(100% - 150px);
+    position: relative;
+}
+main .pro_main {width: 550px;
+    height: 700px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -280px;
+}
+.pro_main img {width: 100%;
+height: 100%;}
+.pro_txt1 {width: 330px;
+    height: 65px;
+    position: absolute;
+    background-color: #FEDFDC;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'HakgyoansimBombanghakR';
+    font-size: 33px;
+    bottom: 10%;
+    left: 20%;
+    transform: rotate(-20deg);
+    color: #8A7CBA;
+}
+
+.pro_txt2 {width: 260px;
+    height: 65px;
+    position: absolute;
+    background-color: #FEDFDC;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'HakgyoansimBombanghakR';
+    font-size: 33px;
+    top: 17%;
+    left: 36%;
+    transform: rotate(-5deg);
+    color: #989CC2;
+}
+
+.pro_txt3 {width: 220px;
+    height: 65px;
+    position: absolute;
+    background-color: #FEDFDC;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'HakgyoansimBombanghakR';
+    font-size: 33px;
+    top: 52%;
+    left: 60%;
+    transform: rotate(20deg);
+    color: #A63E31;
+}

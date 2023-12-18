@@ -1,0 +1,344 @@
+/* 언어설정 */
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'iceJaram-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/iceJaram-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+ul,ol {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+body {background-image: url(img/ba.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+em {font-style: normal;}
+
+
+div {width: 400px;
+height: 500px;
+
+}
+div img {width: 100%;
+height: 100%;}
+
+.line {width: 100%;
+    height: 100%;
+}
+
+
+.cd {
+    width: 400px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 2%;
+    margin-left: -200px;
+    top: 2%;
+    
+}
+.cd_inner {width: 120px;
+height: 120px;
+
+animation: ani5 5s linear infinite;
+animation-play-state:running;
+}
+.cd p {width: 280px;
+height: 40px;
+font-family: 'iceJaram-Rg';
+font-size: 30px;
+color: #fff;
+text-align: center;
+padding-top: 10px;
+box-sizing: border-box;
+position: absolute;
+left: 0;
+top: 0;
+animation: ani6 5s linear infinite;
+animation-play-state:running;
+}
+.cd em {font-weight: bold;}
+
+
+.cd .music_btn{
+    width: 280px;
+    height: 120px;
+    text-align: center;
+    padding-top: 15px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+.music_btn img {width: 40px;
+height: 35px;
+margin-top: 40px;
+padding: 3px;
+box-sizing: border-box;
+cursor: pointer;
+}
+.music_btn>img:nth-child(3) {height: 40px;
+    margin-top: 2.5px;
+}
+
+/* 인트로 설정 */
+.intro {width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:  0%;
+    z-index: 9999;
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 10px );
+-webkit-backdrop-filter: blur( 10px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.vid {width: 820px;
+    height: 540px;
+    position: absolute;
+    left: 50%;
+    margin-left: -410px;
+    top: 50%;
+    margin-top: -270px;
+}
+video {width: 100%;
+height: 100%;
+
+}
+.intro .drag {width: 40px;
+    height: 85px;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    margin-left: -20px;
+    animation: ani 1s infinite;
+    opacity: 0;
+    
+}
+.intro .int_bg {
+    width: 1040px;
+    height: 620px;
+    position: absolute;
+    left: 50%;
+    margin-left: -520px;
+    top: 50%;
+    margin-top: -310px;
+}
+.intro .glass {
+    width: 600px;
+    height: auto;
+    position: absolute;
+    left: 13%;
+    top: 15%;
+    transform: rotate(-30deg);
+}
+
+
+/* 사진 설정 */
+.profile {
+    position: absolute;
+    left: 0;
+    bottom: -20%;
+    transform: rotate(20deg);
+    z-index: 99;
+}
+.profile:hover {
+    bottom: -10%;
+     
+    animation: ani2 1s infinite;
+}
+.profile p {
+    font-size: 36px;
+    font-family: 'PyeongChangPeace-Bold';
+    text-align: center;
+    margin-left: 5px;
+    color: #DC143C;
+}
+.profile em {font-size: 70px;}
+.gallery {
+    position: absolute;
+    bottom: -23%;
+    left: 50%;
+    margin-left: -200px;
+    z-index: 99;
+}
+.gallery p {
+    font-size: 36px;
+    font-family: 'PyeongChangPeace-Bold';
+    text-align: center;
+    margin-left: 5px;
+    color: #5397F8;
+}
+.gallery em {
+    font-size: 70px;
+}
+.gallery:hover {
+    bottom: -15%;
+    animation: ani3 1s infinite;
+}
+
+.yulog {
+    position: absolute;
+    width: 300px;
+    right: 0;
+    bottom: -20%;
+    transform: rotate(-20deg);
+    z-index: 99; 
+}
+.yulog p {
+    font-size: 36px;
+    font-family: 'PyeongChangPeace-Bold';
+    text-align: center;
+    margin-left: 5px;
+    color: #fcff54;
+}
+.yulog em {
+    font-size: 70px;
+}
+.yulog:hover {
+    bottom: -10%;
+    animation: ani4 1s infinite;
+}
+.logi {
+    position: absolute;
+    width: 350px;
+    height: 330px;
+    left: 24%;
+    top: 10%;
+    transform: rotate(-20deg);
+    z-index: 2;
+}
+.logi:hover {
+    /* animation: ani2 1s infinite; */
+}
+.sea {right: 25%;
+    top: 15%;
+    position: absolute;
+}
+.sea:hover {
+    animation: ani3 1s infinite;
+}
+.look {
+    position: absolute;
+    height: 400px;
+    left: 0;
+    top: 0;
+    transform: rotate(-20deg);
+}
+.look:hover {
+    animation: ani4 1s infinite;
+}
+
+.bubble1 {
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    z-index: 6;
+    left: 35%;
+    top: 30%;
+    opacity: 0;
+}
+
+/* bg하트 설정*/
+.heart1 {
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+.heart2{
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    bottom: 5%;
+    left: 20%;
+    transform: rotate(-20deg);
+}
+.heart3{
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    bottom: 10%;
+    right: 12%;
+    transform: rotate(-10deg);
+}
+.heart5 {width: 550px;
+    height: 400px;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    z-index: 5;
+}
+
+
+
+
+
+
+
+
+@keyframes ani {
+    0% {bottom: 2%;}
+    50% {bottom: 4%;}
+    60% {bottom: 2%;}
+    70% {bottom: 3%;}
+    100% {bottom: 2%;}
+}
+@keyframes ani2 {
+    0% {transform: rotate(20deg);}
+    40% {transform: rotate(30deg);}
+    100% {transform: rotate(20deg);}
+}
+@keyframes ani3 {
+    0% {transform: rotate(0deg);}
+    40% {transform: rotate(-10deg);}
+    100% {transform: rotate(0deg);}
+}
+@keyframes ani4 {
+    0% {transform: rotate(-20deg);}
+    40% {transform: rotate(-30deg);}
+    100% {transform: rotate(-20deg);}
+}
+@keyframes ani5 {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@keyframes ani6 {
+    0% {left: 0;}
+    50% {left: -100%;}
+    50.0001% {left: 100%;}
+    100% {left: 0%;}
+}

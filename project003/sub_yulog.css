@@ -1,0 +1,378 @@
+/* 언어설정 */
+@charset 'UTF-8';
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'PyeongChangPeace-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+ul,ol {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+body {
+    height: 300vh;
+    background-image: url(img/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+/* header 설정 */
+header {width: 100%;
+    height: 150px;
+    display: flex;
+    
+}
+.title {width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.title img {width: 70%;
+height: auto;}
+
+.menu {width: 70%;
+    height: 100%;
+    
+}
+.menu ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.menu li {margin: 0 10px 30px;
+    overflow: hidden;}
+.menu a {font-size: 30px;
+    color: #DC143C;
+    font-family: 'SBAggroB';
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.menu a {
+    border: 4px solid rgba(255, 255, 255, .7);
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .menu a span {
+    z-index: 20;
+  }
+  
+  .menu a:after {
+    background: #fff;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: 0.2;
+    position: absolute;
+    top: -50px;
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: 1;
+    /* transition-delay: 0.4s; */
+  }
+  
+  .menu a:hover:after {
+    left: 120%;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  /* main 설정 */
+
+  main {
+    width: 100%;
+    height: calc(300vh - 150px);
+    position: relative;
+}
+.star1 {width: 100px;
+height: 420px;
+position: absolute;
+left: 3%;
+top: 3%;
+}
+.star2 {width: 100px;
+    height: 420px;
+    position: absolute;
+    right: 3%;
+    top: 10%;
+    }
+
+/* yulog_1st 설정 */
+.yulog_1st {width: 100%;
+height: 100vh;
+position: relative;
+}
+.yulog_1st img {width: 100%;
+height: 100%;} 
+.yulog_1st>div {position: absolute;
+}
+.image {display: none;}
+.yulog_1st>div:nth-child(1) {width: 260px;
+height: 310px;
+left: 10%;
+top: 10%;
+z-index: 1;
+}
+.yulog_1st>div:nth-child(2) {width: 240px;
+    height: 360px;
+    left: 35%;
+        top: 13%;
+        z-index: 5;
+}
+.yulog_1st>div:nth-child(3) {width: 310px;
+        height: 400px;
+        left: 46%;
+        top: 4%;
+        z-index: 7;
+    }
+        .yulog_1st>div:nth-child(4) {width: 230px;
+            height: 320px;
+            left: 23%;
+            top: 12%;
+            z-index: 3;
+        }
+            .yulog_1st>div:nth-child(5) {width: 230px;
+                height: 320px;
+                left: 40%;
+                top: 7%;
+                z-index: 6;
+            }
+                .yulog_1st>div:nth-child(6) {width: 290px;
+                    height: 300px;
+                    left: 30%;
+                    top: 10%;
+                    z-index: 4;
+                }
+                    .yulog_1st>div:nth-child(7) {width: 310px;
+                        height: 310px;
+                        left: 15%;
+                        top:6%;
+                        z-index: 2; 
+                    }
+                        .yulog_1st>div:nth-child(8) {width: 310px;
+                            height: 310px;
+                            left: 53%;
+                            top: 11%;
+                            z-index: 8;
+                        }
+                        .yulog_1st>div:nth-child(9) {width: 250px;
+                            height: 450px;
+                            left: 58%;
+                            top: 8%;
+                            z-index: 9;
+                        }
+                        .yulog_1st>div:nth-child(10) {width: 300px;
+                            height: 350px;
+                            left: 64%;
+                            top: 12%;
+                            z-index: 10;
+                        }
+                        .yulog_1st>div:nth-child(11) {width: 400px;
+                            height: 300px;
+                            left: 72%;
+                            top: 14%;
+                            z-index: 11;
+                        }
+
+
+/* yulog_2nd 설정 */
+.yulog_2nd {width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.container {
+    margin: 0 auto;
+    width: 450px;
+    height: 350px;
+    position: absolute;
+    perspective: 1000px;
+    top: 30%;
+    left: 50%;
+    margin-left: -225px;
+  }
+  
+  .carousel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+  .carousel div {
+    transform-style: preserve-3d;
+    
+  }
+  
+  
+  .item {
+    display: block;
+    position: absolute;
+    background: #000;
+    width: 450px;
+    height: 350px;
+    line-height: 200px;
+    font-size: 5em;
+    text-align: center;
+    color: #FFF;
+    opacity: 0.95;
+    border-radius: 10px;
+    transition: transform 1s;
+  }
+  .carousel img {width: 100%;
+height: 100%;}
+  
+  .a {
+    transform: rotateY(0deg) translateZ(450px);
+  }
+  .a .item {
+    background: #ed1c24;
+  }
+  .b {
+    transform: rotateY(60deg) translateZ(450px) rotateY(-60deg);
+  }
+  .b .item {
+    background: #0072bc;
+  }
+  .c {
+    transform: rotateY(120deg) translateZ(450px)  rotateY(-120deg);
+  }
+  .c .item {
+    background: #39b54a;
+  }
+  .d {
+    transform: rotateY(180deg) translateZ(450px) rotateY(-180deg);
+  }
+  .d .item {
+    background: #f26522;
+  }
+  .e {
+    transform: rotateY(240deg) translateZ(450px) rotateY(-240deg);
+  } 
+  .e .item {
+    background: #630460;
+  }
+  .f {
+    transform: rotateY(300deg) translateZ(450px) rotateY(-300deg);
+  }
+  .f .item {
+    background: #8c6239;
+  }
+  
+  .next, .prev {
+    color: #fff;
+    position: absolute;
+    top: 400px;
+    padding: 1em 2em;
+    cursor: pointer;
+    background: #DC143C;
+    border-radius: 5px;
+    border-top: 1px solid #FFF;
+    box-shadow: 0 5px 0 #999;
+    transition: box-shadow 0.1s, top 0.1s;
+    font-family: 'SBAggroB';
+  }
+  .next:hover, .prev:hover { color: #000; }
+  .next:active, .prev:active {
+    top: 404px;
+    box-shadow: 0 1px 0 #999;
+  }
+  .next { right: 1em; }
+  .prev { left: 1em; }              
+
+
+/* yulog_3rd 설정 */
+
+.yulog_3rd {width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.yulog_3rd>div {position: absolute;}
+.yulog_3rd img {width: 100%;
+    height: 100%;
+}
+
+.yulog_3rd>div:nth-child(1) {width: 400px;
+    height: 700px;
+    left: -5%;
+    top: -5%;
+}
+
+.yulog_3rd>div:nth-child(2) {width: 700px;
+    height: 700px;
+    left: 50%;
+    margin-left: -350px;
+    top: 50%;
+    margin-top: -350px;
+    overflow: hidden;
+    transition: all 2s;
+}
+.yulog_3rd>div:nth-child(2) .end {width: 500px;
+height: 500px;
+left: 50%;
+    margin-left: -250px;
+    top: 50%;
+    margin-top: -250px;
+}
+.yulog_3rd>div:nth-child(2):hover .bottom { left: -100%;}
+
+.yulog_3rd>div:nth-child(2) img {position: absolute;}
+.yulog_3rd>div:nth-child(2) .top {z-index: 3;}
+.yulog_3rd>div:nth-child(2) .bottom {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 2s;
+}
+
+.yulog_3rd>div:nth-child(3) {width: 400px;
+    height: 700px;
+    right: -5%;
+    bottom: -5%;
+}
+.yulog_3rd .container1 {
+  width: 200px;
+  height: 60px;
+  bottom: 3%;
+  left: 50%;
+  margin-left: -100px;
+  display: none;
+  cursor: grab;
+}
+
+.yulog_3rd>div:nth-child(4) p {
+  font-size: 45px;
+  font-family: 'PyeongChangPeace-Bold';
+  color: #ed1c24;
+}

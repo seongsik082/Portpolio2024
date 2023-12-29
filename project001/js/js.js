@@ -56,12 +56,12 @@ let selectday = selectDate.getDate()
 let bi = $('.text_form2').text()
 if(pname == "감귤피자체험")
 {
-  $('.fim img').attr('src',"img/ex1.jpg")
+  $('.fim img').attr('src',"img/ex2.jpg")
   $('.guide').text("제주감귤진피 및 감귤마멀레이드를 활용한 감귤피자만들기 체험프로그램입니다.")
 }
 else if(pname == "감귤따기체험")
 {
-  $('.fim img').attr('src',"img/ex2.jpg")
+  $('.fim img').attr('src',"img/ex1.jpg")
   $('.guide').text("감귤박물관에 감귤따기체험기간은 11월부터 1월까지입니다. 자세한 문의사항은 064-760-6400~8로 전화주시면 됩니다.")
 }
 else if(pname == "쿠키머핀체험")

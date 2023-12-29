@@ -8,8 +8,7 @@
   margin: 0;
   padding: 0;
 }
-ul,
-ol {
+ul {
   list-style: none;
 }
 a {
@@ -19,11 +18,32 @@ a {
 img {
   border: none;
 }
+body.fix {overflow: hidden;}  
+
+[data-scroll] {
+  transition: opacity 1s;
+}
+[data-scroll="in"] {
+  opacity: 1;
+}
+[data-scroll="out"] {
+  opacity: 0;
+}
+.ui-datepicker {width: 75.5%;
+  height: auto;
+}
+body {font-family: "Noto Sans KR", sans-serif;}
+
+.ui-datepicker-calendar > tbody td.ui-datepicker-week-end:first-child a { color:#f00; }
+.ui-datepicker-calendar > tbody td.ui-datepicker-week-end:last-child a { color:#00f; }
+
+
 
 .link {
   position: fixed;
   right: 1%;
   top: 2%;
+  width: 97px;
   font-size: 25px;
   font-weight: bold;
   background-color: #7ab551;
@@ -46,19 +66,27 @@ img {
   background-color: rgba(256, 256, 256, 0.9);
   
 }
+.link-inner ul {width: 80%;
+  margin: 0 auto;
+}
 .link-inner li{font-size: 15px;
 color: #000;
-padding-top: 10px;
-border-bottom: 1px solid  #000;}
+padding-bottom: 3px;
+border-bottom: 1px solid  #000;
+box-sizing: border-box;
+margin-top: 10px;
+font-family: "Noto Sans KR", sans-serif;
+}
+.link-inner li:hover {
+  border-bottom: 2px solid  #000;
+  box-sizing: border-box;
+}
 
 .link:hover .link-inner {
-  top: 12.4%;
+  top: 12.1%;
   opacity: 1;
 }
-.link:hover .link-inner ul li {
-  margin-top: 11px;
-  
-}
+
 .main {position: relative;}
 
 /*############## 박스1 설정 ##############*/
@@ -137,7 +165,7 @@ border-bottom: 1px solid  #000;}
   font-size: 27px;
 }
 .util .search>div {
-opacity: 0;
+
   width: 500%;
 height: 100%;
 background-color: #fff;
@@ -147,10 +175,12 @@ left: -405%;
 border: #fe7e03 1px solid;
 border-radius: 10px;
 transition: all 0.5s;
+display: none;
 }
-.util .search:hover>div {
-  top: 110%;
-  opacity: 1;
+#search {
+  width: 201px;
+  height: 37px;
+  border-radius: 10px;
 }
 
 
@@ -177,13 +207,69 @@ transition: all 0.5s;
   background-color: #aaa;
 }
 
+/*############## 에약화면 설정 ##############*/
+
+.fixed {position: fixed;
+  width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.8);
+left: 0;
+top: 0;
+display: flex;
+justify-content:center;
+align-items: center;
+z-index: 7;
+flex-wrap: wrap;
+display: none;}
+.fixed.on {display: flex;}
+.fixed article {
+      width: 80%;
+      height: 60vh;
+      background-color: #fff;
+      border-radius: 10px;
+      position: relative;
+      padding: 30px;
+
+}
+.fixed article p {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000;
+  font-size: 30px;
+  text-align: center;
+  line-height: 1.1;
+  background-color: #ccc;
+  cursor: pointer;
+}
+.fixed article p:hover {background-color: #fff;}
+.fixed article ul {width: 60%;
+              margin: 0 auto;
+              list-style: none;}
+.fixed article li {padding: 10px 20px;}
+.guide {height: 20%;
+  
+        background-color: #45a049;
+      color: #fff;}
+.fim {width: 60%;
+  height: 58%;
+  margin: 0 auto;
+} 
+      .fixed article div img {width: 100%;
+      height: 100%;}
+
+
 /*############## 박스2 설정 ##############*/
 .box2 {
   width: 100%;
-  height: 95  0px;
+  height: 950px;
   
   position: relative;
   z-index: 10;
+  font-family: 'Noto Sans KR', sans-serif;
+
 }
 .box2-1 {
   width: 100%;
@@ -191,11 +277,16 @@ transition: all 0.5s;
 }
 .hero {width: 100%;
       height: 100%;
-    overflow: hidden;}
+    overflow: hidden;
+    position: relative;
+  }
 .box2-1 .hero-inner {
   display: flex;
   width: 270%;
   height: 98%;
+  position: absolute;
+  left: -85%;
+  top: 0;
 }
 .hero  img {
   width: 90%;
@@ -214,7 +305,7 @@ transition: all 0.5s;
 .form .info {
   position: absolute;
   top: 6%;
-  right: 20%;
+  left: 80%;
   font-size: 18px;
 }
 .form-inner {
@@ -231,7 +322,6 @@ transition: all 0.5s;
 .form1 > div {
   width: 300px;
   height: 40px;
- 
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -248,9 +338,10 @@ transition: all 0.5s;
         top: 150%;
       left: 0;
     width: 86%;
-  height: 200px;
+  height: 218px;
   background-color: rgba(256, 256, 256, 0.8);
   padding-top: 20px;
+  border-radius: 5px;
   box-sizing: border-box;
 display: none;}
 .form1 .pop li {padding: 5px 0;
@@ -300,41 +391,14 @@ color: #fe7e03;}
   color: #fe7e03;
 }
 .form2 .cal001 {
-  width: 75.8%;
-  height: 400%;
-  background-color: rgba(256, 256, 256, 0.8);
+  width: 100%;
+  height: 100%;
   display: none;
   position: absolute;
   top: 75%;
-  left: 0;
-}
-.form2 .cal001 h2 {
-  font-size: 16px;
-  padding-top: 10px;
-  margin-left: 7px;
+  left: -3%;
 }
 
-
-.box2 .cal001 table {
-  width: 90%;
-  height: 60%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  margin-left: 7px;
-}
-.box2 .cal001 th,
-td {
-  border: 1px solid #ccc;
-  text-align: center;
-  font-size: 12px;
-}
-.box2 .cal001 th {
-  background-color: #fe7e03;
-}
-.cal001 td:hover {
-  background-color: #fff;
-  color: #fe7e03;
-}
 
 .form3 {
   width: 100px;
@@ -519,6 +583,7 @@ td {
   border-radius: 10px 10px 0 0;
   box-sizing: border-box;
   font-size: 20px;
+  cursor: pointer;
 }
 .box3-1 li:nth-child(2) {
   margin-left: 5px;
@@ -1025,7 +1090,11 @@ box-sizing: border-box;}
 height: 70%;}
 .box5-2-inner > div:nth-child(4) ol {width: 45%;
 height: 80%;
-margin-right: 5%;}
+margin-right: 5%;
+}
+.box5-2-inner > div:nth-child(4) li {
+  font-size: 15px;
+}
 .box5-2-inner > div:nth-child(4) img {width: 100%;
 height: 100%;}
 
@@ -1086,6 +1155,7 @@ footer>div {
   padding-top: 2%;
   box-sizing: border-box;
 }
+footer>div p {font-size: 15px;}
 
 footer>div:nth-child(1) ul {
   display: flex;

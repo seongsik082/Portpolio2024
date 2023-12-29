@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>프로젝트1_감귤박물관</title>
+    <title>감귤박물관</title>
     <!-- 그리드가이드 연결 
     <link rel="stylesheet" href="grid-guide.css">-->
     <!-- 외부스타일시트연결 -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="style.css">
     <!-- 외부스크립트연결 -->
-    <script src="js/jquery-2.1.1.min.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <!-- 폰트어썸 CDN -->
     <script src="https://kit.fontawesome.com/2dd79075cb.js" crossorigin="anonymous"></script>
 
 
     <!-- 제이쿼리 설정 -->
-
+    <!-- <script src="js/jquery-2.1.1.min.js"></script> -->
     <script src="js/js.js"></script>
 
 </head>
@@ -61,11 +63,10 @@
                     <li class="search">
                         <a href="#">
                             <i class="fa fa-search" aria-hidden="true"></i>
-                        
                         </a>
                         <div>
                             <form action="#">
-                                <input type="text">
+                                <input type="text" id="search" placeholder="검색어를 입력하세요.">
                             </form>
                         </div>
                     </li>
@@ -98,6 +99,22 @@
               </div>
              
             </div>
+            <div class="fixed">
+                <article>
+                <div class="fim">
+                    <img src="img/ex2.jpg" alt="">
+                </div>
+                  <p>x</p>
+                  <ul>
+                    <li>예약날짜 : <span></span></li>
+                    <li>예약인원 : <span></span></li>
+                    <li>프로그램명 : <span></span></li>
+                  </ul>
+            
+                  <div class="guide">예약안내에 해당하는글을 작성해주세요 </div>
+            
+                </article>
+              </div>
             <div class="form">
                <div class="form-inner">
                     <div class="form1">
@@ -116,93 +133,32 @@
                     <div class="form2">
                         <div class="text_form2">원하시는 날짜를 선택해주세요.</div>
                         <p class="date"><i class="fa fa-search" aria-hidden="true"></i></p>
-                        <div class="cal001">
-                            <h2>2023년 11월</h2>
-                            <table>
-                                <thead>
-                                    <tr>            
-                                        <th>일</th>
-                                        <th>월</th>
-                                        <th>화</th>
-                                        <th>수</th>
-                                        <th>목</th>
-                                        <th>금</th>
-                                        <th>토</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>1</td>
-                                        <td>2</td>
-                                        <td>3</td>
-                                        <td>4</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>6</td>
-                                        <td>7</td>
-                                        <td>8</td>
-                                        <td>9</td>
-                                        <td>10</td>
-                                        <td>11</td>
-                                    </tr>
-                                    <tr>
-                                        <td>12</td>
-                                        <td>13</td>
-                                        <td>14</td>
-                                        <td>15</td>
-                                        <td>16</td>
-                                        <td>17</td>
-                                        <td>18</td>
-                                    </tr>
-                                    <tr>
-                                        <td>19</td>
-                                        <td>20</td>
-                                        <td>21</td>
-                                        <td>22</td>
-                                        <td>23</td>
-                                        <td>24</td>
-                                        <td>25</td>
-                                    </tr>
-                                    <tr>
-                                        <td>26</td>
-                                        <td>27</td>
-                                        <td>28</td>
-                                        <td>29</td>
-                                        <td>30</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    
-                                </tbody>
-                            </table>
+                        <div class="cal001" id="datepicker">
                         </div>
                         
                     </div>
                     <div class="form3">
                         <p class="top">성인</p>
                         <i class="fa fa-minus-circle" aria-hidden="true"></i>
-                        <p class="num">0</p>
+                        <p class="num" id="a_num">0</p>
                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
                     </div>
                     <div class="form4">
                         <p class="top">어린이</p>
                         <i class="fa fa-minus-circle" aria-hidden="true"></i>
-                        <p class="num">0</p>
+                        <p class="num" id="c_num">0</p>
                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
                     </div>
                     <div class="form5">
                         <p class="top">유아</p>
                         <i class="fa fa-minus-circle" aria-hidden="true"></i>
-                        <p class="num">0</p>
+                        <p class="num"id="b_num">0</p>
                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
                     </div>
-                    <p class="btn">예약</p>
+                    <p class="btn" id="reserve-button">예약</p>
+                    <p class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></p>
                </div>
-               <p class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></p>
+               
 
 
                
@@ -222,21 +178,30 @@
                     <li>이벤트</li>
                 </ul>
             </div>
-            <div class="box3-2 listBox">
+            <div class="box3-2 listBox" data-scroll>
                 <ul class="notice" style="display: flex;">
                         <li>
-                            <div><a href="#">공지사항 내용</a></div>
-                            <div><a href="#">날짜</a></div>
+                            <div>
+                                <a href="#">
+                                    2024년 감귤박물관 기획전시실 대관 신청 안내
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    2023.12.04
+                                </a>
+                            </div>
                         </li>
-                        <li><div><a href="#">공지사항 내용</a></div>
-                            <div><a href="#">날짜</a></div></li>
-                        <li><div><a href="#">공지사항 내용</a></div>
-                            <div><a href="#">날짜</a></div></li>
-                        <li><div><a href="#">공지사항 내용</a></div>
-                            <div><a href="#">날짜</a></div></li>
+                        <li><div><a href="#">
+                            감귤박물관 꿈나다 카페 가격 변경(인상) 안내</a></div>
+                            <div><a href="#">2023.11.29</a></div></li>
+                        <li><div><a href="#">2023 제주 감귤 박람회 안내</a></div>
+                            <div><a href="#">2023.11.14</a></div></li>
+                        <li><div><a href="#">2023 귤림추색 감귤아트전 개최</a></div>
+                            <div><a href="#">2023.10.13</a></div></li>
                         <li>
-                            <div><a href="#">공지사항 내용</a></div>
-                            <div><a href="#">날짜</a></div>
+                            <div><a href="#">2023년 감귤따기체험안내</a></div>
+                            <div><a href="#">2023.10.05</a></div>
                         </li>
                 </ul>
                 <ul class="preview">
@@ -306,8 +271,8 @@
                <p class="right"><i class="fa fa-chevron-right" aria-hidden="true"></i></p>
             </div>
         </section>
-        <section class="box5">
-            <div class="box5-1">
+        <section class="box5" >
+            <div class="box5-1" data-scroll>
                 <div class="box5-1-inner">
                     <div><h2>감귤이야기</h2></div>
                     <div><i class="fa fa-plus" aria-hidden="true"></i></div>
@@ -327,8 +292,8 @@
                     </div>
                 </div>
             </div>
-            <div class="box5-2">
-                <div class="box5-2-inner">
+            <div class="box5-2" data-scroll>
+                <section class="box5-2-inner" >
                     <div><h2>감귤레시피</h2></div>
                     <div><i class="fa fa-plus" aria-hidden="true"></i></div>
                     <div class="box5_txt1">
@@ -337,9 +302,9 @@
                         <p><img src="img/recipe1.jpg" alt=""></p>
                         
                         <ol>
-                            <li>1. 귤을 얇게 슬라이스한다.</li>
-                            <li>2. 귤과 설탕을 1:1 비율로 버무려준다.</li>
-                            <li>3. 1~2일 정도 상온숙성시킨 뒤 냉장보관한다.</li>
+                            <li>귤을 얇게 슬라이스한다.</li>
+                            <li>귤과 설탕을 1:1 비율로 버무려준다.</li>
+                            <li>1~2일 정도 상온숙성시킨 뒤 냉장보관한다.</li>
                         </ol>
 
                     </div>
@@ -349,18 +314,16 @@
                         <p><img src="img/recipe2.jpg" alt=""></p>
                         
                         <ol>
-                            
-                            <li>1. 냄비에 설탕과 물을 2:1 비율로 넣고 센 불로 끓여 준다.</li>
-                            <li>2. 설탕물이 끓기 시작하면 중불로 낮춘 후 10분 끓여 준다. 이때, 절대 젓지 않도록 주의한다.</li>
-                            <li>3. 큰 기포가 올라오며 노란빛이 돌 때 약불로 낮춰 다시 10분간 끓여 준다.</li>
-                            <li>4. 준비해둔 귤  꼬치를 굴리거나 국자 등을 이용해 시럽을 바른다.</li>
-                            
+                            <li>냄비에 설탕과 물을 2:1 비율로 넣고 센 불로 끓여 준다.</li>
+                            <li>설탕물이 끓기 시작하면 중불로 낮춘 후 10분 끓여 준다. 이때, 절대 젓지 않도록 주의한다.</li>
+                            <li>큰 기포가 올라오며 노란빛이 돌 때 약불로 낮춰 다시 10분간 끓여 준다.</li>
+                            <li>준비해둔 귤  꼬치를 굴리거나 국자 등을 이용해 시럽을 바른다.</li>
                         </ol>
                     </div>
-                </div>
+                </section>
             </div>
         </section>
-        <section class="box6">
+        <section class="box6" data-scroll>
             <div class="box6-inner">
                 <div>
                     <h2>오시는 길<h4>(제주공항기준)</h4></h2>
@@ -388,7 +351,7 @@
             </ul>
         </div>
         <div>
-            <p>copyright &copy; 2023.green. All Rights Reserved.</p>
+            <p>copyright &copy; 2024. Seong-sik. All Rights Reserved.</p>
             <p>
                 (63605) 제주특별자치도 서귀포시 효돈순환로 441(신효동) 감귤박물관
 TEL 064)760-6400~1 <br>FAX 064)760-6409(제주특별자치도 서귀포시 중앙로 105(서홍동) <br>제주특별자치도 서귀포시 616-83-06253)

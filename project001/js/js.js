@@ -56,7 +56,7 @@ let selectday = selectDate.getDate()
 let bi = $('.text_form2').text()
 if(pname == "감귤피자체험")
 {
-  $('.fim img').attr('src',"img/ex2.jpg")
+  $('.fim img').attr('src',"img/ex3.jpg")
   $('.guide').text("제주감귤진피 및 감귤마멀레이드를 활용한 감귤피자만들기 체험프로그램입니다.")
 }
 else if(pname == "감귤따기체험")
@@ -66,7 +66,7 @@ else if(pname == "감귤따기체험")
 }
 else if(pname == "쿠키머핀체험")
 {
-  $('.fim img').attr('src',"img/ex3.jpg")
+  $('.fim img').attr('src',"img/ex2.jpg")
   $('.guide').text("제주감귤을 이용하여 감귤머핀, 쿠키, 찹살떡 만들기 체험을 즐길 수 있는 프로그램입니다.")
 }
 

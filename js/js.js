@@ -65,22 +65,31 @@ $(function(){
         console.log(i)
         if(i== 0){
             var location = document.querySelector(".prof").offsetTop;
-            location -= 100;
+            if(wd<769){
+                location -= 100;
+            }
+            
             window.scrollTo({top:location, behavior:'smooth'});
         }
         else if(i == 1) {
             var location = document.querySelector(".pro1").offsetTop;
-            location -= 100;
+            if(wd<769){
+                location -= 100;
+            }
             window.scrollTo({top:location, behavior:'smooth'});
         }
         else if(i == 2) {
             var location = document.querySelector(".pro2").offsetTop;
-            location -= 100;
+            if(wd<769){
+                location -= 100;
+            }
             window.scrollTo({top:location, behavior:'smooth'});
         }
         else if(i == 3) {
             var location = document.querySelector(".pro3").offsetTop;
-            location -= 100;
+            if(wd<769){
+                location -= 100;
+            }
             window.scrollTo({top:location, behavior:'smooth'});
         }
 

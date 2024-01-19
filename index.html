@@ -1,37 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>김성식 의 포트폴리오</title>
-
-    <!-- 외부스타일시트연결 -->
-    <link rel="stylesheet" href="style.css">
-<!-- 외부스크립트연결 -->
-<script src="js/jquery-2.1.1.min.js"></script>
-<script src="js/js.js"></script>
-</head>
-<body>
-    <header>
-        <!-- 본인을나타낼수 있는로고 -->
-        <img src="https://picsum.photos/id/5/200/300" alt="">
-        <nav>
-
-            <ul>
-                <li><a href="#">프로필</a></li>
-                <li><a href="#">프로젝트1</a></li>
-                <li><a href="#">프로젝트2</a></li>
-                <li><a href="#">프로젝트3</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section></section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>김성식 | 포트폴리오</title>
+    <!-- 폰트어썸 CDN -->
+    <script
+      src="https://kit.fontawesome.com/2dd79075cb.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 스타일시트 연결 -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" media="screen and (max-width: 769px)"  href="media.css">
+    <!-- 제이쿼리 연결 -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/js.js"></script>
+  </head>
+  <body >
     
-<footer>
-    <!-- 저작권내용을 담습니다. -->
-</footer>
-    
-</body>
+    <main>
+      <header>
+        <div class="logo">Portfolio</div>
+        <div class="gnb">
+          <ul class="web">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Project1</a></li>
+            <li><a href="#">Project2</a></li>
+            <li><a href="#">Project3</a></li>
+          </ul>
+          <ul class="mobile">
+            <li>About</li>
+            <li>Projects</li>
+          </ul>
+        </div>
+      </header>
+      <article class="tracking-in-contract-bck-top">
+        <p class="blur-out-expand-fwd ">Welcome!<br>
+          Seongsik's Portfolio
+
+        </p>
+      </article>
+      <section class="prof">
+        <div class="profile">
+          <p class="text">
+            <span>
+              컴퓨터공학과
+            </span>
+            <span>
+              프론트엔드개발자
+            </span>
+            <span>
+              유연한 사고
+            </span>
+            <span>
+              유니티과정수료
+            </span>
+            
+          </p>
+          <div class="pic">
+            <img src="img/man1.png" alt="">
+          </div>
+          <div class="skill">
+            <p>Skill</p>
+            <img src="img/html.png" alt="" class="html">
+            <img src="img/css.png" alt="" class="css">
+            <img src="img/js.png" alt="" class="js">
+            <img src="img/uni.png" alt="" class="uni">
+            <img src="img/r.png" alt="" class="r">
+            <img src="img/photo.png" alt="" class="photo">
+            <img src="img/figma.png" alt="" class="fim">
+          </div>
+          <div class="inter">
+            <p>Interesting</p>
+            <img src="img/game.png" alt="">
+            <img src="img/music.png" alt="">
+            <img src="img/it.png" alt="">
+          </div>
+          <div class="line">
+            <img src="img/line.png" alt="">
+            <p class="txt1">1999년 출생</p>
+            <p class="txt2">2018년 <br>동원고등학교<br>졸업</p> 
+            <p class="txt3">2021년 <br>유니티 기초 과정 수료</p>
+            <p class="txt4">2024년 <br>배재대학교<br>졸업</p>
+            <p class="txt5">2024년 <br>NCS UI/UX & 프론트엔드 개발자 과정 수료 </p>
+          </div>
+          <div class="line2">
+            <img src="img/line2.png" alt="">
+            <p class="txt6">1999년 <br>출생</p>
+            <p class="txt7">2018년 <br>동원고등학교<br>졸업</p> 
+            <p class="txt8">2021년 <br>유니티 기초 과정 수료</p>
+            <p class="txt9">2024년 <br>배재대학교<br>졸업</p>
+            <p class="txt10">2024년 <br>NCS UI/UX & 프론트엔드 개발자 과정 수료 </p>
+          </div>
+
+          <div class="ft">
+            <img src="img/git.png" alt="" class="git">
+            <img src="img/mail.png" alt="" class="mail">
+            <p class="mail1">http://github.com/seongsik082/Portpolio2024</p>
+            <p class="mail2">tjdtlr991210@gmail.com</p>
+          </div>
+        </div>
+      </section>
+      <section class="pro1">
+        <div>
+          <div class="txt">
+            <p class="tt1">WEB & MOBILE SITE RENEWAL</p>
+            <p class="tt2">감귤박물관 웹사이트</p>
+            <p class="tt3">제주도의 감귤뿐만아니라
+              역사에 대해서도 알려주는 박물관입니다.</p>
+          </div>
+          <img src="img/IMG_2332.JPG" alt="" class="wb1"/>
+          <img src="img/tan2.png" alt="" class="web1" />
+          <img src="img/tan_m.png" alt="" class="mob1">
+        </div>
+        <div>
+          <p class="btn1 btn">
+            <a href="project001/index.html" target="_blank"
+              >바로가기<i class="fa fa-arrow-right" aria-hidden="true"></i
+            ></a>
+          </p>
+        </div>
+      </section>
+      <section class="pro2">
+        <div>
+          <div class="txt">
+            <p>WEB & MOBILE SITE RENEWAL</p>
+            <p>프레데터 웹사이트</p>
+            <p>게이밍 기어 전문브랜드로 게임에 필요한
+              장비들을 제작하고 판매하는 곳입니다.</p>
+          </div>
+            <img src="img/acer.png" alt="" class="acer">
+            <img src="img/acer2.png" alt="" class="web2">
+            
+        </div>
+        <div>
+          <p class="btn2 btn">
+            <a href="project002/index.html" target="_blank"
+              >바로가기<i class="fa fa-arrow-right" aria-hidden="true"></i
+            ></a>
+          </p>
+        </div>
+      </section>
+      <section class="pro3">
+        <div>
+          <div class="txt">
+            <p>FAN PAGE WEB SITE</p>
+            <p>조유리 팬페이지</p>
+            <p>조유리의 흔적들을
+              찾아볼 수 있는 곳입니다.</p>
+          </div>
+          <img src="img/yuri.jpg" alt="" class="yuri">
+          <img src="img/yulp.png" alt="" class="web3">
+      </div>
+      <div>
+        <p class="btn1 btn">
+          <a href="project003/index.html" target="_blank"
+            >바로가기<i class="fa fa-arrow-right" aria-hidden="true"></i
+          ></a>
+        </p>
+      </div>
+      </section>
+    </main>
+    <footer>
+      <div class="f_inner">
+        <div class="top_btn">
+          <p>상단으로 이동하기</p>
+        </div>
+        <p>copyright &copy; Seongsik. 2024. All Rights Reserved.</p>
+        <p>본 사이트는 포트폴리오용 사이트입니다.</p>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -56,22 +56,23 @@ let selectday = selectDate.getDate()
 let bi = $('.text_form2').text()
 if(pname == "감귤피자체험")
 {
-  $('.fim img').attr('src',"img/ex3.jpg")
+  $('.fim img').attr('src',"img/ex1.jpg")
   $('.guide').text("제주감귤진피 및 감귤마멀레이드를 활용한 감귤피자만들기 체험프로그램입니다.")
 }
 else if(pname == "감귤따기체험")
 {
-  $('.fim img').attr('src',"img/ex1.jpg")
+  $('.fim img').attr('src',"img/ex2.jpg")
   $('.guide').text("감귤박물관에 감귤따기체험기간은 11월부터 1월까지입니다. 자세한 문의사항은 064-760-6400~8로 전화주시면 됩니다.")
 }
 else if(pname == "쿠키머핀체험")
 {
-  $('.fim img').attr('src',"img/ex2.jpg")
+  $('.fim img').attr('src',"img/ex3.jpg")
   $('.guide').text("제주감귤을 이용하여 감귤머핀, 쿠키, 찹살떡 만들기 체험을 즐길 수 있는 프로그램입니다.")
-}
+} 
+if(pname == "원하시는 체험을 선택해주세요.") alert("원하시는 체험을 선택해주세요.")
 
 
-// alert(
+// alert(        
 
 // '예약날짜:'+(selectMon+1)+'월'+selectday+'일'+'\n'+ '예약인원'
 // +pep +'명'+'\n'+ '프로그램명:'+
@@ -79,7 +80,7 @@ else if(pname == "쿠키머핀체험")
 // )
 
 if( (num1 != "0" || num2 != "0" || num3 != "0")  && pname != "원하시는 체험을 선택해주세요." && bi != "원하시는 날짜를 선택해주세요."){
-  if(pname == "원하시는 체험을 선택해주세요.") alert("원하시는 체험을 선택해주세요.")
+  
   $('.fixed article li').eq(0).find('span').text((selectMon+1)+'월'+selectday+'일')
   $('.fixed article li').eq(1).find('span').text('성인 : '+num1 +'명' +' 어린이 : '+num2 +'명'+' 유아 : '+num3 +'명')
   $('.fixed article li').eq(2).find('span').text(pname);

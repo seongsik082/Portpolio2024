@@ -26,16 +26,18 @@ ul,ol {
 a{
     text-decoration: none;
     color: #000;
+    cursor: url('img/cursor2.png'),auto;
 }
 img {
     border: none;
     vertical-align: bottom;
 }
-
-body {background-image: url(img/profil_bg.jpg);
+html,body {cursor: url('img/cursor.png'),auto;}
+body {
+    background-image: url(img/profil_bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center -10px;
+    background-position: right -70px;
     width: 100%;
     height: 100vh;
 }
@@ -68,7 +70,7 @@ height: auto;}
 .menu li {margin: 0 10px 30px;
     overflow: hidden;}
 .menu a {font-size: 30px;
-    color: #FFB84D;
+    color: #DC143C;
     font-family: 'SBAggroB';
     padding: 10px;
     box-sizing: border-box;
@@ -112,13 +114,14 @@ main {
     width: 100%;
     height: calc(100% - 150px);
     position: relative;
+    overflow: hidden;
 }
-main .pro_main {width: 550px;
-    height: 700px;
+main .pro_main {width: 450px;
+    height: 550px;
     position: absolute;
     bottom: 0;
     left: 50%;
-    margin-left: -280px;
+    margin-left: -225px;
 }
 .pro_main img {width: 100%;
 height: 100%;}
@@ -133,9 +136,11 @@ height: 100%;}
     font-family: 'HakgyoansimBombanghakR';
     font-size: 33px;
     bottom: 10%;
-    left: 20%;
+    left: -25%;
     transform: rotate(-20deg);
     color: #8A7CBA;
+    transition: all 3s;
+    transition-delay: 1s;
 }
 
 .pro_txt2 {width: 260px;
@@ -148,10 +153,12 @@ height: 100%;}
     align-items: center;
     font-family: 'HakgyoansimBombanghakR';
     font-size: 33px;
-    top: 17%;
-    left: 36%;
+    top: 32%;
+    left: -20%;
     transform: rotate(-5deg);
     color: #989CC2;
+    transition: all 3s;
+    transition-delay: 0.5s;
 }
 
 .pro_txt3 {width: 220px;
@@ -164,8 +171,45 @@ height: 100%;}
     align-items: center;
     font-family: 'HakgyoansimBombanghakR';
     font-size: 33px;
-    top: 52%;
-    left: 60%;
+    top: 65%;
+    right: -20%;
+    transform: rotate(0deg);
+    color: #A63E31;
+    transition: all 3s;
+    transition-delay: 0.5s;
+}
+
+.pro_txt4 {width: 220px;
+    height: 65px;
+    position: absolute;
+    background-color: #FEDFDC;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'HakgyoansimBombanghakR';
+    font-size: 33px;
+    top: 35%;
+    right: -20%;
     transform: rotate(20deg);
     color: #A63E31;
+    transition: all 3s;
+}
+
+.pro_txt5 {width: 260px;
+    height: 65px;
+    position: absolute;
+    background-color: #FEDFDC;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'HakgyoansimBombanghakR';
+    font-size: 33px;
+    top: 53%;
+    left: -20%;
+    transform: rotate(10deg);
+    color: #A63E31;
+    text-align: center;
+    transition: all 3s;
 }

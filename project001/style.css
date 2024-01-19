@@ -109,6 +109,7 @@ font-family: "Noto Sans KR", sans-serif;
   height: 100%;
 }
 
+
 .box1-2 {
   width: 50%;
   height: 60%;
@@ -182,7 +183,7 @@ display: none;
   height: 37px;
   border-radius: 10px;
 }
-
+.m_util {display: none;}
 
 
 .fa-chevron-down {
@@ -328,6 +329,8 @@ display: none;}
   padding-left: 20px;
   box-sizing: border-box;
 }
+
+
 .form1 > div:nth-child(1) {
   border: #fe7e03 1px solid;
   margin-top: 40px;

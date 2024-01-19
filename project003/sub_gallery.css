@@ -20,11 +20,13 @@ ul,ol {
 a{
     text-decoration: none;
     color: #000;
+    cursor: url('img/cursor2.png'),auto;
 }
 img {
     border: none;
     vertical-align: bottom;
 }
+html,body {cursor: url('img/cursor.png'),auto;}
 
 body {
     height: 100vh;
@@ -110,9 +112,10 @@ main {
     height: 750px;
     margin: 30px auto;
 position: relative;}
-.gly_txt {width: 42%;
-height: 100%;
+.gly_txt {width: 40%;
+height: 94%;
 margin: 0 auto;
+margin-top: 25px;
 background-color: #000;
 }
 .gly_txt img {width: 100%;
@@ -131,7 +134,7 @@ height: 100%;}
 .gly_img>div {width: 142px;
     height: 142px;
     margin: 0 10px;
-    cursor: pointer;
+    cursor: url('img/cursor2.png'),auto;
     position: relative;
     box-sizing: border-box;
 }

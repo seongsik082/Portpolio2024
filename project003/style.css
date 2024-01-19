@@ -30,11 +30,13 @@ ul,ol {
 a{
     text-decoration: none;
     color: #000;
+    cursor: url('img/cursor2.png'),auto;
 }
 img {
     border: none;
     vertical-align: bottom;
 }
+html,body {cursor: url('img/cursor.png'),auto;}
 
 body {background-image: url(img/ba.png);
     background-repeat: no-repeat;
@@ -54,6 +56,15 @@ height: 100%;}
 
 .line {width: 100%;
     height: 100%;
+}
+
+.arr {width: 30px;
+    height: 35px;
+    position: absolute;
+    right: 24%;
+    top: 0;
+    transform: rotate(-10deg);
+    animation: ani7 0.7s linear infinite alternate;
 }
 
 
@@ -105,11 +116,12 @@ height: 35px;
 margin-top: 40px;
 padding: 3px;
 box-sizing: border-box;
-cursor: pointer;
+cursor: url('img/cursor2.png'),auto;
 }
 .music_btn>img:nth-child(3) {height: 40px;
     margin-top: 2.5px;
 }
+
 
 /* 인트로 설정 */
 .intro {width: 100%;
@@ -341,4 +353,10 @@ height: 100%;
     50% {left: -100%;}
     50.0001% {left: 100%;}
     100% {left: 0%;}
+}
+@keyframes ani7 {
+    0% {right: 24%;
+    top: 0;}
+    100% {right: 23%;
+        top: 2%;}
 }

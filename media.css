@@ -1,0 +1,223 @@
+@media all and (max-width: 769px){
+
+    /* 헤더 설정 */
+    header {height: 100px;}
+    header.smallheader {height: 80px;}
+    header .logo {font-size: 20px;
+        margin: 0;
+    }
+    header .gnb {font-size: 14px;}
+    .gnb .web {display: none;}
+    .gnb .mobile {display: flex;}
+    header>div:nth-child(1) {width: 40%;}
+    header>div:nth-child(2) {width: 60%;}
+    header .logo {justify-content: center;}
+
+
+    /* 메인 설정 */
+    main {height: 600vh;}
+    @-webkit-keyframes tracking-in-contract-bck-top {
+        0% {
+          letter-spacing: 1em;
+          -webkit-transform: translateZ(50%) translateY(0);
+                  transform: translateZ(50%) translateY(0);
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.6;
+        }
+        100% {
+          -webkit-transform: translateZ(0) translateY(1000%);
+                  transform: translateZ(0) translateY(1000%);
+          opacity: 1;
+        }
+      }
+      @keyframes tracking-in-contract-bck-top {
+        0% {
+          letter-spacing: 1em;
+          -webkit-transform: translateZ(50%) translateY(0);
+                  transform: translateZ(50%) translateY(0);
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.6;
+        }
+        100% {
+          -webkit-transform: translateZ(0) translateY(1000%);
+                  transform: translateZ(0) translateY(1000%);
+          opacity: 1;
+        }
+      }
+
+    /* 프로필 설정 */
+    .prof {top: 17%;}
+    .profile {
+        width: 100%;
+        height: 1000px;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+    }
+    .profile .pic {
+        width: 50%;
+        height: 20%;
+        left: 90%;
+        top: 5%;
+    }
+    .profile .text {
+        position: absolute;
+        width: 50%;
+        height: 20%;
+        left: -5%;
+        top: 5%;
+        font-size: 16px;
+    }
+    .text span:nth-child(2) {left: 43%;}
+
+    .line {display: none;}
+    .line2 {display: block;}
+    .skill {width: 90%;
+        height: 20%;
+        right: 5%;
+        top: 52%;
+    }
+    .skill p{top: -5%;
+        font-size: 20px;
+    }
+    .skill img {width: 60px;
+        height: 60px;
+        
+    }
+    .skill .html {left: 17%;
+        top: 15%;
+    }
+    .skill .css {left: 41%;
+        top: 15%;
+    }
+    .skill .js {left: 65%;
+        top: 15%;
+    }
+    .skill .uni {left: 5%;
+        top: 60%;
+    }
+    .skill .r {left: 27%;
+        top: 60%;
+    }
+    .skill .photo {left: 51%;
+        top: 60%;
+    }
+    .skill .fim {left: 75%;
+        top: 60%;
+    }
+    .inter {width: 90%;
+        height: 10%;
+        right: 5%;
+        bottom: 14%;
+    }
+    .inter p {
+        width: 180px;
+        height: 25px;
+        left: 5%;
+        top: -9%;
+        font-size: 20px;
+      }
+
+    
+
+
+    .ft {
+        width: 90%;
+        left: 5%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        bottom: 1%;
+    }
+
+    .ft img {width: 30px;
+    height: 30px;}
+
+    .ft p {
+        font-size: 12px;
+        margin-top: 5%;   
+    }
+    .ft .mail1 {margin-top: 10%;  }
+    .ft .git {
+        left: 45%;
+        top: 5%;
+      }
+      .ft .mail {
+        left: 45%;
+        top: 46%;
+      }
+
+    article p {font-size: 18px;}
+    .web1 {width: 60%;
+    height: 40%;
+    bottom: -18%;
+    left: 0%;
+    }
+    .pro1 .txt {width: 57%;}
+    .pro2 .txt {width: 62%;}
+    
+    
+
+    /* pro1설정 */
+    .pro1 {
+        position: absolute;
+        top: 45%;
+        height: 700px;
+    }
+    .pro1>div:nth-child(1) {
+        width: 100%;
+        
+    }
+    .pro1>div:nth-child(2) {
+        width: 100%;
+    }
+    .pro1>div>.txt>p:nth-child(1) {font-size: 12px;}
+    .pro1>div>.txt>p:nth-child(2) {font-size: 32px;
+        width: 140%;
+    }
+    .pro1>div>.txt>p:nth-child(3) {font-size: 14px;}
+    .wb1 {display: none;
+    
+    }
+    .web1 {bottom: 10%;}
+    .mob1 {display: block;}
+
+    /* pro2 설정 */
+    .pro2 {height: 700px;
+    top: 65%;}
+    .pro2>div:nth-child(1) {width: 100%;}
+    .pro2>div:nth-child(2) {width: 100%;}
+    .pro2>div>.txt>p:nth-child(1) {font-size: 12px;}
+    .pro2>div>.txt>p:nth-child(2) {font-size: 32px;
+        width: 120%;
+    }
+    .pro2>div>.txt>p:nth-child(3) {font-size: 14px;}
+    .web2 {width: 70%;
+        height: 40%;
+        right: -3%;
+        bottom: 10%;
+    }
+    /* pro3 설정 */
+    .pro3 {height: 700px;
+        top: 85%;
+    }
+    .pro3>div:nth-child(1) {width: 100%;}
+    .pro3>div:nth-child(2) {width: 100%;}
+    .pro3>div>.txt>p:nth-child(1) {font-size: 12px;}
+    .pro3>div>.txt>p:nth-child(2) {font-size: 32px;
+        width: 120%;
+    }
+    .pro3>div>.txt>p:nth-child(3) {font-size: 14px;}
+    .web3 {width: 70%;
+        height: 40%;
+        left: -3%;
+        bottom: 10%;
+    }
+
+    /* footer 설정 */
+    .f_inner p {font-size: 14px;}
+}

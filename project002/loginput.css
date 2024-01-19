@@ -1,0 +1,141 @@
+/* 언어설정*/
+@charset 'UTF-8';
+
+/* reset */
+
+ul {list-style: none;
+   
+}
+a {
+    text-decoration: none;
+    color: #000;
+  }
+  img {
+    border: none;
+    vertical-align: bottom;
+  }
+body {width: 100%;
+    height: 100%;
+}
+
+/*  header설정 */
+
+header{width: 40%;
+    margin: 140px auto;
+    text-align: center;
+    
+}
+header img {width: 60%;}
+
+section {width: 40%;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+section h2 {text-align: center;}
+
+
+/* section설정 */
+form {width: 400px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+form>div {display: flex;
+    align-items: center;
+}
+.id {
+    width: 400px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.pwd {
+    width: 400px;
+    height: 40px;
+       
+}
+.ch {width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+}
+
+
+#chBox {
+    appearance: none;
+  }
+
+  #chBox {
+    appearance: none;
+    position: relative;
+    border: max(2px, 0.1em) solid gray;
+    border-radius: 1.25em;
+    width: 2.25em;
+    height: 1.25em;
+  }
+
+  #chBox::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    transform: scale(0.8);
+    background-color: gray;
+    transition: left 250ms linear;
+  }
+  #chBox:checked::before {
+    background-color: white;
+    left: 1em;
+  }
+  
+  #chBox:checked {
+    background-color: rgb(0, 206, 58);
+    border-color: rgb(0, 206, 58);
+  }
+  #chBox:disabled {
+    border-color: lightgray;
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  #chBox:disabled:before {
+    background-color: lightgray;
+  }
+  
+  #chBox:disabled + span {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+.btn {width: 300px;
+height: 50px;
+margin: 15px auto;
+background-color: rgb(0, 206, 58);
+box-shadow: 1px 1px 1px black;
+transition-duration: 0.3s;
+border-radius: 5px;
+color: #fff;
+font-size: 20px;
+}
+.btn:active {
+    margin-left: 51px;
+    margin-top: 16px;
+    
+    box-shadow: none;
+}
+
+
+  /* footer 설정 */
+  footer {width: 40%;
+    height: 100px;
+    margin: 10px auto;
+}
+  footer ul{display: flex;
+    justify-content: center;
+    padding: 0;
+}
+  footer li{padding: 0px 10px;
+    box-sizing: border-box;
+}
+footer li:hover a{text-decoration: underline;}

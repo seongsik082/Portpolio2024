@@ -1,0 +1,28 @@
+@media all and (max-width: 767px){
+.logo {
+    width: 40%;
+}
+.util {width: 30%;}
+.menu {
+    width: 40%;
+}
+.menu li {
+    display: none;
+  }
+  .menu li:nth-child(1) {display: block;}
+
+
+  
+video{height: 100%;}
+
+.txt p {width: 100%;}
+.txt > p:nth-child(3) {width: 65%;}
+
+
+.sect4 {overflow: hidden;}
+.index {display: none;}
+
+
+.bg_wrap > div p svg {left: -10%;}
+
+}

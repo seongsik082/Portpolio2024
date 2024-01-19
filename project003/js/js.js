@@ -23,6 +23,8 @@ $(function () {
 let m_count = 1; 
 let m_txt = ['러브 쉿!', 'Taxi', 'Glassy']
 
+
+
 $('.prev_btn').click(function(){
   m_count--;
   

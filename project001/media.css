@@ -1,0 +1,62 @@
+/* 미디어쿼리 모바일 */
+@media all and (max-width: 767px){
+    /* quick link */
+    .link{display: none;}
+
+
+    .box1 {width: 100%;
+        height: 100px;
+        background-color: #7AB551;
+    }
+    .box1>div {height: 100%;}
+    .box1-1 {display: none;}
+    .box1-2 {font-size: 35px;}
+    .box1-3 {width: 50%;}
+    .box1-4 {display: none;}
+    .util {display: none;}
+    .m_util{display: block;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .m_util ul {display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .m_util li {
+        padding: 5px 10px;
+        margin-right: 15px;
+        box-sizing: border-box;
+        cursor: pointer;
+        background-color: #ffdf82;
+        color: #fff;
+    }
+
+    /* 예약시스템 */
+    .box2-1 {height: 100%;}
+    .form {display: none;}
+    .box2 .form {height: 16%;}
+
+    /* box3 설정 */
+    .box3-1, .box3-2 {width: 90%;}
+
+    /* box4-2(갤러리) 설정 */
+    .box4 {height: 600px;}
+    .container {display: none;}
+    .trailer {height: 100%;}
+    .trailer ul {width: 910%;
+    }
+    .trailer li {width: 70%;
+        height: 95%;
+    }
+    /* box5 설정 */
+    .box5-2 {display: none;}
+    .box5 > div {width: 100%;}
+    /* box6 설정 */
+    .box6-inner {width: 90%;}
+    .box6-inner>div:nth-child(1)>p {font-size: 13px;}
+
+    footer>div {width: 100%;}
+}

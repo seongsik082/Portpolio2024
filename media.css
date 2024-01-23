@@ -1,5 +1,11 @@
 @media all and (max-width: 769px){
 
+
+    body {
+        /* background-image: linear-gradient(to top, #085078 1%, #85D8CE 99%); */
+        background-image: linear-gradient(to bottom, #085078 1%, #6b6b6b 89%);
+        
+    }
     /* 헤더 설정 */
     header {height: 100px;}
     header.smallheader {height: 80px;}
@@ -121,6 +127,8 @@
         top: -9%;
         font-size: 20px;
       }
+      .inter img {width: 55px;
+        height: 50px;}
 
     
 
@@ -201,6 +209,8 @@
         right: -3%;
         bottom: 10%;
     }
+    .acer {display: none;}
+    .mob2 {display: block;}
     /* pro3 설정 */
     .pro3 {height: 700px;
         top: 85%;
@@ -217,6 +227,8 @@
         left: -3%;
         bottom: 10%;
     }
+    .yuri {display: none;}
+    .mob3 {display: block;}
 
     /* footer 설정 */
     .f_inner p {font-size: 14px;}

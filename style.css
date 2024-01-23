@@ -29,7 +29,6 @@ img { border:0;
 
 body {background-image: url(img/bw2.jpg);
     background-attachment: fixed;
-    
     background-position: center center;
     background-size: cover;
     
@@ -659,6 +658,7 @@ main>div:nth-child(3) {background-color: blue;} */
   z-index: 5;
   
 }
+.mob2 {display: none;}
 
 
 
@@ -730,6 +730,7 @@ top: 50%;
   z-index: 5;
   
 }
+.mob3 {display: none;}
 
 
 /* footer 설정 */

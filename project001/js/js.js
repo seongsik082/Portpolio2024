@@ -3,10 +3,26 @@
 $(function(){
   var aj = 0;
   var bj = 0;
+  var cj = 0;
   ScrollOut({
     /* options */
   });
   
+  $('.lang').click(function(){
+    if(cj==0){
+      $('.util ol>li:nth-child(1)').animate({'top':100+'%',opacity: 1})
+      $('.util ol>li:nth-child(2)').animate({'top':200+'%',opacity: 1})
+      cj++;
+    }
+    else if(cj==1){
+      $('.util ol>li:nth-child(1)').animate({'top':-100+'%',opacity: 0})
+      $('.util ol>li:nth-child(2)').animate({'top':-200+'%',opacity: 0})
+      cj--;
+    }
+    
+  })
+
+
   $( "#datepicker" ).datepicker({
     dateFormat: 'yy-mm-dd' //달력 날짜 형태
            ,showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
@@ -197,6 +213,10 @@ $('body').removeClass('fix')
   })
 
 
+  $('.box3-2 li').click(function(e){
+    e.preventDefault();
+  })
+
 
   var ai=0;
   var bi=0;
@@ -249,7 +269,6 @@ $('body').removeClass('fix')
 var cc=0
 
 
-
 $('.box4-2 .left').click(function(){
   
 
@@ -264,13 +283,21 @@ $('.box4-2 .right').click(function(){
 
   cc--;
     $('.trailer ul').css({'left':(cc*10)+'%'})
-    if(cc==-5){
+    if(cc==-4){
       cc=0
       $('.trailer ul').css({'left': 0})
     }
-    $('.container li:nth-child('+(-cc)+')')
+    
   
   
+})
+
+$('.trailer li').click(function(){
+  var th = $(this).index();
+  var im = $('.trailer li img').eq(th).attr('src');
+  console.log(im)
+  $('.container li img').attr('src',im);
+
 })
 
 

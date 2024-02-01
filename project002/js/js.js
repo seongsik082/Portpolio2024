@@ -45,20 +45,20 @@ $(function () {
     if (position > 1800 && position < 2200) {
       $(".story-inner1 .wBar1").css({width:27+'%'});
       $(".story-inner1 .ball1").css({ left: 22 + "%" });
-      $(".story-inner1 .stext").css({ 'left': 13 + "%", 'opacity':1 });
+      $(".story-inner1 .stext").css({ 'left': 9 + "%", 'opacity':1 });
     }
      else if (position > 2900 && position < 3300) {
       $(".story-inner2 .wBar2").css({width:27+'%'});
       $(".story-inner2 .ball2").css({ right: 22 + "%" });
-      $(".story-inner2 .stext").css({ 'right': 13 + "%", 'opacity':1 });
+      $(".story-inner2 .stext").css({ 'right':11 + "%", 'opacity':1 });
     } else if (position > 3800 && position < 4500) {
       $(".story-inner3 .wBar3").css({width:27+'%'});
       $(".story-inner3 .ball3").css({ left: 22 + "%" });
-      $(".story-inner3 .stext").css({ 'left': 13 + "%", 'opacity':1 });
+      $(".story-inner3 .stext").css({ 'left': 12 + "%", 'opacity':1 });
     } else if (position > 4700 && position < 4900) {
       $(".story-inner4 .wBar4").css({width:27+'%'});
       $(".story-inner4 .ball4").css({ right: 22 + "%" });
-      $(".story-inner4 .stext").css({ 'right': 13 + "%", 'opacity':1 });
+      $(".story-inner4 .stext").css({ 'right': 10 + "%", 'opacity':1 });
     } 
     // else if (position > 3800 && position < 4200) {
     //   $(".story-inner5 .wBar5").width(400);

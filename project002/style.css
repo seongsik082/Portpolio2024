@@ -382,6 +382,34 @@ source {
 .txt .btn {
   cursor: pointer;
 }
+
+.txt .btn {
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.txt .btn:hover {
+  color: #FF357A;
+}
+
+.txt .btn:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 10px 0;
+  max-width: 0;
+  border-bottom: 2px solid #c8a755;
+  color: #c8a755;
+  content: attr(data-hover);
+  -webkit-transition: max-width 0.5s;
+  -moz-transition: max-width 0.5s;
+  transition: max-width 0.5s;
+}
+
+.txt .btn:hover:before, .txt .btn:focus:before {
+  max-width: 100%;
+}
+
 .sect1 .scr {
   position: absolute;
   right: 1%;
@@ -501,23 +529,20 @@ source {
   box-sizing: border-box;
   z-index: 1;
 }
-
+.stext {
+  width: 410px;
+}
 .story-inner1 .stext {
   color: #fff;
   position: absolute;
   left: 30%;
   top: 70%;
-  width: 310px;
+  
   height: 300px;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
   transition: all 1s;
   opacity: 0;
-}
-.story-inner1 .stext {
-  font-size: 16px;
-  width: 210px;
-  left: 10%;
 }
 
 .story-inner1 .bar {
@@ -565,7 +590,7 @@ source {
   position: absolute;
   right: 30%;
   top: 70%;
-  width: 310px;
+  width: 365px;
   height: 300px;
   font-size: 20px;
   text-align: center;
@@ -619,7 +644,7 @@ source {
   position: absolute;
   left: 30%;
   top: 70%;
-  width: 310px;
+  width: 320px;
   height: 300px;
   font-size: 20px;
   text-align: center;
@@ -671,8 +696,8 @@ source {
   color: #fff;
   position: absolute;
   right: 30%;
-  top: 68%;
-  width: 310px;
+  top: 66%;
+  width: 360px;
   height: 300px;
   font-size: 20px;
   text-align: center;

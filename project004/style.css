@@ -22,6 +22,7 @@ img { border:0;
 body {max-width: 550px;
     font-family: 'Pretendard-Regular';
 }
+body.on{overflow: hidden;}
 
 
 /* header 설정 */
@@ -41,7 +42,90 @@ margin-left: 5%;
 .menu {width: 7%;
 height: 33%;
 margin-right: 5%;
+cursor: pointer;
 }
+
+.m_inner {position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.15);
+    left: 0;
+    top: 0;
+    display: none;
+    max-width: 550px;
+}
+
+.m_inner>div {position: absolute;
+    right: 0;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    background-color: #fff;
+}
+.head {width: 100%;
+    height: 10%;
+    background-color: #495A7A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head>p {
+    width: 50%;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.head>p i {margin: 0 5px;}
+.head>p:nth-child(1) {
+    padding-left: 5%;
+    box-sizing: border-box;
+}
+.head>p:nth-child(2){display: flex;
+    justify-content: flex-end;
+    padding-right: 5%;
+    box-sizing: border-box;
+    font-size: 27px;
+}
+.map {width: 100%;
+    height: 80%;
+}
+.map>ul {width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    font-size: 22px;
+}
+.map li {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.foot {
+    width: 100%;
+    height: 10%;
+    background-color: #495A7A;
+    display: flex;
+    flex-wrap: wrap;
+}
+.foot>div {width: 50%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foot>div p {width: 60%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+
+
+
 
 /* main 설정 */
 main {width: 100%;}
@@ -79,7 +163,7 @@ form {width: 100%;}
     justify-content: center;
     align-items: center;
     color: #fff;
-    
+    cursor: pointer;
 }
 .s_inner em {margin-bottom: 2px;}
 .s_inner i {padding-left: 5px;}
@@ -113,6 +197,9 @@ form {width: 100%;}
     height: 39px;
 }
 
+#prev {cursor: pointer;}
+#stop {cursor: pointer;}
+#next {cursor: pointer;}
 .slide {
     width: 90%;
     height: 75%;
@@ -217,6 +304,8 @@ form {width: 100%;}
 .top li {
     width: 25%;
     margin-left: 5%;
+    text-align: center;
+    cursor: pointer;
 }
 .top_2 {
     width: 25%;
@@ -224,6 +313,7 @@ form {width: 100%;}
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .top_2>img {
     width: 33%;
@@ -238,7 +328,7 @@ form {width: 100%;}
     font-size: 15px;
 }
 .bot li {margin-top: 6%;}
-.bot .date li {margin-top: 17%;}
+.bot .date>li {margin-top: 17%;}
 
 
 /* ######## app ######## */
@@ -271,6 +361,7 @@ form {width: 100%;}
     margin-left: 6.3%;
     border-radius: 10px;
     background-color: #fff;
+    cursor: pointer;
 }
 .im1 {
     width: 60%;
@@ -309,6 +400,7 @@ form {width: 100%;}
     height: 33%;
     margin-left: 5%;
     margin-top: 2%;
+    cursor: pointer;
 }
 
 /* ########### custom ########### */
@@ -348,6 +440,7 @@ form {width: 100%;}
     height: 70%;
  background-color: #E4E4E4;
  border-radius: 50%;
+ cursor: pointer;
 }
 .insta {
     width: 35%;
@@ -358,6 +451,7 @@ form {width: 100%;}
     justify-content: center;
     align-items: center;
     margin-left: 5%;
+    cursor: pointer;
 }
 .insta img {
     width: 65%;

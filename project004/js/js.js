@@ -46,5 +46,23 @@ $(function() {
         toggle = false;
     })
 
+    $('.top_1 li').click(function(){
+        var t = $(this).index();
+        $('.top_1 li').removeClass('on');
+        $(this).addClass('on');
+        $('.bot').css({'display':'none'});
+        $('#bot'+(t+1)).css({'display':'flex'});
+
+
+    })
+    $('.menu').click(function(){
+        $('.m_inner').fadeIn();
+        $('html,body').addClass('on');
+    })
+    $('#out').click(function(){
+        $('.m_inner').fadeOut();
+        $('html,body').removeClass('on');
+    })
+
 
 })
